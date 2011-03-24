@@ -1,0 +1,389 @@
+body{
+	background: black;
+	font-family:Verdana, Geneva, Arial, Helvetica, sans-serif;
+}
+
+a:link{
+	font-weight: bold;
+	text-decoration:none;
+	color:black;
+}
+a:visited{
+	text-decoration:none;
+	color: black;
+}
+a:hover{
+	text-decoration:none;
+	color:grey;
+}
+
+#content{
+	margin: 0 auto;
+	position:relative;
+	width:1250px;
+	height:819px;
+	background: url('../images/default_background2.jpg');
+	border: 13px solid #FFF;
+}
+
+
+#topbar{
+	position: absolute;
+	top:0;
+	width:inherit;
+	height: 23px;
+	background: rgba(255,255,255,0.3);
+}
+#clock{
+	font-size: 13px;
+	background: url(../images/clockIcon.png) no-repeat 0 4px;
+	padding:4px 0 0 20px;
+	height:23px;
+	float:right;
+	padding-right:20px;
+}
+#bottombar{
+
+	position:absolute;
+	bottom:0;
+	width:inherit;
+	height:65px;
+}
+#bottombar li{
+	display:inline;
+}
+#bottombar a{
+	display:inline-block;
+	height:38px;
+	width:38px;
+	padding:5px 5px 0 5px;
+	margin:0 10px;
+	
+}
+#lista{
+	z-index:9999;
+	padding:10px 30px;
+	border-radius: 10px 10px 0 0;
+	background: rgba(255,255,255,.2);
+	width:272px;
+	margin: 0 auto;
+}
+
+
+
+/*
+ * 
+ * Fönster start
+ * 
+ */
+
+h2.windowHeading{
+	font:verdana, sans-serif;
+	font-size:14px;
+	display:inline-block;
+}
+.windowWrap{
+	position: absolute;
+}
+.windowIcon{
+	background: url('../images/picWinIcon.png');
+	float:left;
+	height:16px;
+	width:16px;
+}
+.window{
+	position:relative;
+	border-radius:5px;
+	border: 8px solid rgba(0,0,0,0.0);
+	 -webkit-box-shadow:0 0 18px rgba(0,0,0,0.4);
+ 	 -moz-box-shadow:0 0 18px rgba(0,0,0,0.4);
+ 	 box-shadow:0 0 18px rgba(0,0,0,0.4);
+ 	backgruond:white;
+
+}
+.windowContent{
+	overflow-y:auto;
+	position:relative;
+	background: white;
+	padding: 20px;
+}
+.windowStatus{
+	float:left;
+}
+.windowTop{
+	text-align:center;
+	padding: 5px 10px;
+	background:white;
+	height:20px;
+	-webkit-border-top-left-radius: 5px;
+	-webkit-border-top-right-radius: 5px;
+	-moz-border-radius-topleft: 5px;
+	-moz-border-radius-topright: 5px;
+	border-top-left-radius: 5px;
+	border-top-right-radius: 5px;
+	cursor:move;
+}
+.windowClose{
+	background: url('../images/closeButton.png');
+	float:right;
+	display:block;
+	width:16px;
+	height:16px;
+	/*background:url('../images/closeButton.gif') no-repeat;*/
+}
+.windowResize{
+	position:absolute;
+	right:0px;
+	bottom:0px;
+	display:block;
+	width:15px;
+	height:15px;
+	background:url('../images/resizeIcon.png') no-repeat;
+	cursor: se-resize;
+}
+.windowAjaxLoader{
+	display:none;
+	background:url('../images/ajax-loader.gif') no-repeat;
+	height:66px;
+	width:66px;
+	margin:0 auto;
+}
+.windowAjaxLoaderBar{
+	background:url('../images/ajax-loader-bar.gif') no-repeat;
+	height:11px;
+	width:16px;
+	
+}
+.windowBottom{
+	
+	padding: 5px 10px;
+	background:white;
+	height:20px;
+	-webkit-border-bottom-left-radius: 5px;
+	-webkit-border-bottom-right-radius: 5px;
+	-moz-border-radius-bottomleft: 5px;
+	-moz-border-radius-bottomright: 5px;
+	border-bottom-left-radius: 5px;
+	border-bottom-right-radius: 5px;
+}
+
+/*
+ * 
+ * Fönster slut
+ * 
+ */
+
+/*
+ * 
+ * Bildvisare start
+ * 
+ */
+
+.imagelink{
+	display:inline-block;
+	text-align:center;
+	margin:2px 5px;
+	padding:5px;
+	background-color: grey;
+	border-radius:3px;
+	vertical-align:center;
+}
+.thumbImage{
+	margin: 0 auto;
+	text-align:center;
+	vertical-align:center;
+
+}
+
+/*
+ * 
+ * Bildvisare slut
+ * 
+ */
+
+/*
+ * 
+ * Rss-läsare start
+ * 
+ */
+.rssFeed{
+	font-size:12px;
+}
+.rss_title{
+	font-size: 130%;
+	padding: 5px 0;
+	font-weight: bold;
+}
+
+}
+.rssFeed a{
+	padding: 5px 0;
+}
+.rssFeed p{
+	line-height:18x;
+	padding: 5px 0 15px 0;
+}
+/*
+ * 
+ * Rss-läsare slut
+ * 
+ */
+
+
+/*
+ * 
+ * Memory start
+ * 
+ */
+
+.wrap{
+	width:256px;
+	margin: 0 auto;
+}
+.countLeft, .counter{
+	text-align:center;
+}
+.square{
+	background:green;
+	width:64px;
+	height:64px;
+	float:left;
+	display:block;
+	background:url("../images/memory/0.png") no-repeat;
+}
+.clear{
+	clear:both
+}
+.s1{
+	background:url("../images/memory/1.png") no-repeat;
+}
+.s2{
+	background:url("../images/memory/2.png") no-repeat;
+}
+.s3{
+	background:url("../images/memory/3.png") no-repeat;
+}
+.s4{
+	background:url("../images/memory/4.png") no-repeat;
+}
+.s5{
+	background:url("../images/memory/5.png") no-repeat;
+}
+.s6{
+	background:url("../images/memory/6.png") no-repeat;
+}
+.s7{
+	background:url("../images/memory/7.png") no-repeat;
+}
+.s8{
+	background:url("../images/memory/8.png") no-repeat;
+}
+/*
+ * 
+ * Memory slut
+ * 
+ */
+
+/*
+ * 
+ * LabbyMessage start
+ * 
+ */
+.closeMessage{
+	display:block;
+	background:url(../images/labbymessage/blueribbon.png) no-repeat;
+	position:absolute;
+	top:-1px;
+	right:20px;
+	width:29px;
+	height:38px;	
+}
+.timeMessage{
+	display:block;
+	background:url(../images/labbymessage/greenribbon.png) no-repeat;
+	position:absolute;
+	top:-1px;
+	right:55px;
+	width:29px;
+	height:38px;	
+}
+.chat{
+	height: 250px;
+	background:#F1F1F1;
+	overflow-y:scroll;
+	overflow-x:hidden;
+}
+.input{
+	height:20px;
+}
+.textRutor{
+	margin-bottom:13px;
+}
+.message, .count{
+	position:relative;	
+	text-shadow: 1px 1px 1px #fff;
+	color:#343434;
+	padding:10px 5px 10px 5px;
+	margin-bottom:13px;
+	font-size:13px;
+	border: 1px solid #D8D8D8;
+}
+.count{
+	padding: 10px 15px 10px 15px;
+}
+
+    /*    FORMULÄR CSS */
+
+.text{
+	float:left;
+	padding:5px;
+	font-size:13px;
+	line-height: 150%;
+	color:#000;
+	font-family:Verdana, Geneva, Arial, Helvetica, sans-serif;
+	height:20px; 
+
+	background: -webkit-gradient(linear, left top, left 25, from(#FFFFFF), color-stop(4%, #b9babb), to(#FFFFFF));  
+    background: -moz-linear-gradient(top, #FFFFFF, #b9babb 1px, #FFFFFF 25px);   
+	
+	border-radius: 5px;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+
+}
+.text:hover{
+    -webkit-box-shadow: rgba(255, 255, 255, 0.6) 0px 0px 6px;  
+}
+.submit{
+	float:right;
+	height:20px;
+	width:80px;
+	border-radius: 5px;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	
+	background-image: -webkit-gradient(
+	    linear,
+	    left bottom,
+	    left top,
+	    color-stop(0.3, rgb(205,207,207)),
+	    color-stop(1, rgb(247,247,247))
+	);
+		background-image: -moz-linear-gradient(
+	    center bottom,
+	    rgb(205,207,207) 30%,
+	    rgb(247,247,247) 100%
+	);
+} 
+
+/*
+ * 
+ * Labbymessage slut
+ * 
+ */
+.tooltip{
+	position:absolute;
+	width:100px;
+	height:50px;
+	background:red;
+}
