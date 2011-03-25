@@ -1,1 +1,12 @@
-Charcodetest � � �
+Inledning
+Detta projekt kommer att repetera många kursen moment men även introducera några nya delar. 
+Uppgiften är dessutom av en något större art än vad du tidigare gjort på laborationerna varför ett 
+strukturerat arbetssätt är viktigt, speciellt gäller detta för betygsnivå 4 och 5.
+
+Mål
+Efter genomfört projekt kommer du att ha befäst de kunskaper som du tillgodogjort dig tidigare i 
+kursen. För de högre betygen kommer du även att testas i att skriva strukturerad kod uppdelad i flera 
+objekt samt få erfarenhet av "drag and drop"-funktionalitet.
+
+Du kommer även att få testa på att göra asynkrona anrop till en webbserver med hjälp av 
+XMLHttpRequest-objektet och parsa och arbeta med JSON.
