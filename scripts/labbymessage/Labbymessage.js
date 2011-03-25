@@ -10,13 +10,27 @@ desktopApp.scripts = desktopApp.scripts || {};
 desktopApp.scripts.ui = desktopApp.scripts.ui || {};
 
 desktopApp.scripts.LabbyMessage = function(text, icon, size) {
-		desktopApp.scripts.ui.Win.call(this, text, icon, size);
-		this.renderWindow();
-		var that = this;
-		this.messages = [];
-		var content = document.getElementById("content");
-		
-		/* Skapar all HTML-kod för chatten */
+    desktopApp.scripts.ui.Win.call(this, text, icon, size);
+    this.renderWindow();
+    var that = this;
+    this.messages = [];
+    var content = document.getElementById("content");
+
+    $.ajax({
+        method: 'get',
+        url: 'http://homepage.lnu.se/staff/tstjo/labbyserver/getMessage.php?history=50',
+        complete: function(result){
+           console.log(result);
+           alert(result);
+        },
+        success: function(result){
+            alert(result);
+        }
+    });
+
+
+/*
+		// Skapar all HTML-kod för chatten
 		var siteDIV = document.createElement("div");
 		siteDIV.className = "site";
 		var wrapDiv = document.createElement("div");
@@ -61,7 +75,7 @@ desktopApp.scripts.LabbyMessage = function(text, icon, size) {
 			return false;
 		};
 		
-		/* Placerar HTML-elementen */
+		// Placerar HTML-elementen
 		this.windowContent.appendChild(siteDIV);
 		siteDIV.appendChild(wrapDiv);
 		
@@ -74,14 +88,14 @@ desktopApp.scripts.LabbyMessage = function(text, icon, size) {
 		this.renderMessages();
 		this.textArea.appendChild(document.createTextNode("Skriv in ditt meddelande här!"));
 		form.appendChild(inputButton);
-	
+                  */
 };
 desktopApp.scripts.LabbyMessage.prototype = new desktopApp.scripts.ui.Win();
 desktopApp.scripts.LabbyMessage.prototype.createMessage = function () {
 
     if (this.textArea.value === "") {
         this.focusOnTextArea();
-		alert("Du måste skriva någonting!");
+        alert("Du måste skriva någonting!");
         return false;
     }
     var meddelande = new desktopApp.scripts.Message(this.textArea.value, new Date());
@@ -95,7 +109,7 @@ desktopApp.scripts.LabbyMessage.prototype.clearMessages = function () {
 desktopApp.scripts.LabbyMessage.prototype.renderMessages = function () {
 
     /* Rensar meddelanden ur divven */
-	this.clearMessages();
+    this.clearMessages();
 
     /* Rensar textfältet */
     this.textArea.value = "";
@@ -104,7 +118,7 @@ desktopApp.scripts.LabbyMessage.prototype.renderMessages = function () {
     for (var i = 0; i < this.messages.length; i++) {
         this.renderMessage(i);
     }
-	this.chatDIV.scrollTop = this.chatDIV.scrollHeight;
+    this.chatDIV.scrollTop = this.chatDIV.scrollHeight;
     //this.countDIV.innerHTML = "Antal meddelanden: " + this.renderMessageCount();
     this.focusOnTextArea();
 };
